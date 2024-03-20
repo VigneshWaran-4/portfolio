@@ -1,0 +1,375 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+.fa-bars{
+    color: white;
+}
+/* Remove Browser styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+    /* common styles */
+
+.btn {
+    color: white;
+    display: inline-block;
+    background-color: crimson;
+    padding: 10px 18px;
+    transition: 300ms;
+}
+.btn:hover{
+    transform: translateY(5px);
+}
+.flex-design{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    /* styles */
+
+header{
+    min-height: 100vh;;
+    background: linear-gradient( rgba(0, 0, 0, 0.062),rgba(0, 0, 0, 0.041)),url(https://static.vecteezy.com/system/resources/previews/028/856/969/large_2x/beautiful-sunset-sky-background-dramatic-sky-with-glowing-clouds-ai-generative-free-photo.jpg);
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+.header-content{
+    width: 95%;
+    height: 12vh;
+}
+.logo{
+    height: 150px;
+}
+.nav-links{ 
+    
+    width: 60%;
+    
+}
+.nav-links a{
+    color: white;
+}
+.nav-links li::after{
+    content: '';
+    display: block;
+    background-color: crimson;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 300ms;
+}
+.nav-links li:hover::after{
+    transform: scaleX(1);
+}
+.text-center{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50% );
+    text-align: center;
+}
+.text-center h1{
+    margin: 1.2rem 0;
+}
+.content{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mb{
+    margin-bottom: 3rem;
+}
+.mt{
+    margin-top: 5rem;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.wwa-box{
+    background-color: crimson;
+    padding: 20px;
+    margin-left:10px ;
+    text-align: center;
+    color: white;
+}
+.wwa-box h3{
+    margin-bottom: 5px;
+}
+.wwa-box:first-child{
+    margin-left: 0px;
+}
+.wwa-box:hover{  
+    box-shadow: 3px 5px 13px 0px black;
+}
+.course_img{
+    position: relative;
+}
+.course_img img{
+    display: block;
+}
+.course_img::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform 300ms;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+.course:hover .course_img::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+.course{
+    position: relative;
+}
+.course_content{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: top 300ms,opacity 350ms;
+    transition-delay: 200ms;
+}
+.course:hover .course_content{
+    top: 50%;
+    opacity: 1 ;
+}
+.course-content{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.fac{
+    background-color: crimson;
+    margin-bottom: 10px;
+    position: relative;
+}
+.fac-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+.fac-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    z-index: -1;
+    transition: z-index 300ms;
+}
+.fac-image img{
+     display: block;
+}
+.fac-image{
+    position: relative;
+    left: 20px;
+    padding: 20px 0;
+    transition: left 800ms;
+}
+.fac:hover .fac-image{
+    left: 80%;
+    transition: left 300ms,opacity 800ms;
+}
+.fac:hover .fac-image>img{
+    box-shadow: 30px 0px 100px 3px black;
+}
+.fac:hover .fac-text{
+    z-index: 1;
+    transition: z-index 700ms;
+}
+.footer-logo{
+    height: 150px;
+    width: 150px;
+}
+.footer-top{
+    background-color: midnightblue;
+    color: white;
+}
+.footer-links a{
+    color: white;
+}
+.footer-top-container{
+    display: flex;
+    text-align: center;
+}
+.footer-bottom{
+    background-color: grey;
+    text-align: center;
+    color: white;
+    padding: 0.6rem;
+}
+.about-us-text{
+    position: relative;
+    padding: 2rem;
+}
+.about-us-text::after{
+   content: '';
+   position: absolute;
+inset:-80px 0 0 -100px;
+   background-image: url(https://media.istockphoto.com/id/877235850/vector/book-icon.jpg?s=612x612&w=0&k=20&c=FSTH3SrcKKTSH09LLkucwABRWOKHRYPmEjxqBjEDjxc=);
+   background-size: contain;
+   background-repeat:no-repeat ;
+   opacity: 0.29;
+   z-index: -1;
+}
+.junior-developer{
+    background-color: crimson;
+    color: white;
+    padding: 3rem ;
+}
+.my{
+    margin-top: 4rem;
+}
+.my-text{
+    width: 100%;
+    padding: 2rem;
+}
+.my:nth-child(2){
+    flex-direction: row-reverse;
+}
+/* course table */
+
+.course-table-section{
+    background-color:lightcoral;
+    padding: 2rem 0;
+}
+.course-table th,.course-table td{
+    padding: 1rem;
+}
+.course-table th{
+    color: midnightblue;
+    background-color: white;
+}
+.course-table-content{
+    max-width: 600px;
+    text-align: center;
+}
+.course-table tr{
+    transition: transform 300ms;
+}
+.course-table tr:not(:first-child):hover{
+    transform: scale(1.01);
+}
+.course-table tr:nth-child(odd){
+    background-color: midnightblue;
+    color: white;
+}
+.course-table tr:nth-child(even){
+    color: white;
+    background-color: crimson;
+}
+.course-table tr a{
+    color: white;
+    text-decoration: none;
+    background-color: green;
+    padding: 6px 10px;
+}
+.course-table{
+    width: 100%;
+    border-collapse: collapse;
+    filter: drop-shadow(-20px -10px 20px);
+}
+
+input,textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 6px;
+    border: none;
+    border-bottom: 1px solid palevioletred;
+}
+input:focus,textarea:focus{
+    border: none;
+    color: white;
+    outline: none;
+    background-color: palevioletred;
+    border-bottom: 2px solid palevioletred;
+}
+.form h2{
+    display: inline-block;
+}
+.form h2::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: palevioletred;
+}
+
+
+
+/* Media queries */
+@media only screen and(max-width:762px){
+    .footer-top-container{
+        flex-direction: column;
+    }
+    .footer-links{
+        margin-bottom: 1rem;
+    }
+    .footer-college{
+        text-align: center;
+    }
+}
+@media only screen and(max-width:840px){
+    .my,.my:nth-child(2){
+        flex-direction: column;
+    }
+}
+@media only screen and(max-width:894px){
+    .text-center{
+      width: 100px;
+    }
+
+}
+@media only screen and(max-width:920px){
+     .fac:hover .fac-image{
+        opacity: 0;
+     }
+}
+@media only screen and(max-width:500px){
+    .nav-links{
+        position: absolute;
+        flex-direction: column;
+        right: 20px;
+        top: 12vh;
+        height: 50vh; 
+        width: 10%;
+        padding: 1.5rem 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+.nav-show{
+    width: 100%;
+    right: 0;
+
+}
+.textareahide{
+    left:-15rem;
+}
